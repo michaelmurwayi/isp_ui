@@ -23,8 +23,8 @@
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
-    <div class="container-fluid header col-md-12">
-      <video autoplay muted loop class="header_Video">
+    <div class="container-fluid mask pattern-8 header col-md-12">
+      <video autoplay muted loop class="mask pattern-8">
       <source src="../assets/header.mp4"  type="video/mp4">
     </video>
     </div>
@@ -52,16 +52,32 @@ export default {
   height: 400px;
   width: 550px;
   border-radius:25px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 video{
   position: absolute;
   margin-top: -12px;
   margin-left: -12px;
   height: 400px;
-  border-radius:25px ;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   object-fit: cover;
-  width: 98%  !important;
-  opacity: 0.5;
+  width: 97.5vw  !important;
+  opacity: ;
+}
+@media only screen and (max-width: 768px) {
+  video{
+  position: absolute;
+  margin-top: -12px;
+  margin-left: -12px;
+  height: 200px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  object-fit: cover;
+  width: 92.5vw  !important;
+  opacity: ;
+  }
+
+
 }
 </style>
