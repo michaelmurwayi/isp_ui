@@ -4,6 +4,7 @@
     fluid
     class="main"
     >
+    <!-- start of navigation div -->
     <v-app-bar rounded class="navigation mt-4">
        <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
@@ -23,19 +24,30 @@
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
+    <!-- end of page navigation div -->
+
+    <!-- start of header div -->
     <div class="container-fluid mask pattern-8 header col-md-12">
       <video autoplay muted loop class="mask pattern-8">
       <source src="../assets/header.mp4"  type="video/mp4">
     </video>
     </div>
-
+     <v-toolbar app flat fixed color="transparent" prominent >
+      <v-card-text class="px-0">
+      <v-btn flat solo outlined color="black" class="mr-2 white"><strong>Home</strong></v-btn>
+      <v-btn flat outlined color="black" class="mr-2 white"><strong>Register</strong></v-btn>
+      <v-btn flat outlined color="black" class="mr-2 white"><strong>Login</strong></v-btn>
+      <v-btn flat outlined color="primary" class="mr-2"><strong>Account</strong></v-btn>
+      </v-card-text>    
+    </v-toolbar>
+    <!-- end of header div -->
     </v-container>
   </v-app>
 </template>
 
 <script>
 export default {
-
+  
 }
 </script>
 
