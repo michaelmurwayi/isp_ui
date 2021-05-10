@@ -143,7 +143,7 @@
                 <div
                   v-if="hover"
                   class="d-flex  orange darken-2 v-card--reveal display-1 white--text"
-                  style="height: 100px; width:100%; position:relative; top:-20px; left: 0px;"
+                  style="height: 100px; width:100%; position:relative; top:-20px; left: 0px; opacity:0.8;"
                 >
                   Purchase
                   {{ items.package_price }}ksh
