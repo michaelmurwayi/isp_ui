@@ -42,9 +42,9 @@
         <v-flex class="subnav-content">
         <div class="nav-content">
           <div ><router-link class="navlinks" to="/" style="color:white">Home</router-link></div>
-          <div ><router-link class="navlinks" to="products" style="color:white"> Login</router-link></div>
-          <div ><router-link class="navlinks" to="services" style="color:white"> Register</router-link></div>
-          <div ><router-link class="navlinks" to="about" style="color:white"> Account</router-link></div>
+          <div ><router-link class="navlinks" to="login" style="color:white"> Login</router-link></div>
+          <div ><router-link class="navlinks" to="Register" style="color:white"> Register</router-link></div>
+          <div ><router-link class="navlinks" to="Account" style="color:white"> Account</router-link></div>
         </div>
       </v-flex>
     </div>
