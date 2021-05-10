@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import Main from  '../components/main.vue'
-import Form from '../components/loginForm.vue'
+import Form from '../components/signupForm.vue'
 
 export default {
   components: {
