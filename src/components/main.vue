@@ -64,9 +64,9 @@
 <style scoped>
 .container-fluid{
   background:	#E8E8E8;
-  height: 130vh;
+  height: 190vh;
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 200px;
   margin: 20px;
   margin-bottom: 50px;

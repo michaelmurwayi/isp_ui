@@ -14,7 +14,23 @@
       v-model="name"
       :counter="10"
       :rules="nameRules"
-      label="Name"
+      label="First Name"
+      required
+    ></v-text-field>
+    <v-text-field
+    class="text-field"
+      v-model="name"
+      :counter="10"
+      :rules="nameRules"
+      label="Last Name"
+      required
+    ></v-text-field>
+
+    <v-text-field
+    class="text-field"
+      v-model="email"
+      :rules="emailRules"
+      label="Username"
       required
     ></v-text-field>
 
@@ -23,6 +39,22 @@
       v-model="email"
       :rules="emailRules"
       label="E-mail"
+      required
+    ></v-text-field>
+    <v-text-field
+    class="text-field"
+      v-model="name"
+      :counter="10"
+      :rules="nameRules"
+      label="Phonenumber"
+      required
+    ></v-text-field>
+
+    <v-text-field
+    class="text-field"
+      v-model="email"
+      :rules="emailRules"
+      label="Password"
       required
     ></v-text-field>
 
@@ -39,14 +71,14 @@
       class=" ml-4 mr-4"
       @click="reset"
     >
-      Login
+      Register
     </v-btn>
 
     <v-btn
-      color="warning"
+      color="success"
       @click="resetValidation"
     >
-      Create Account
+      Already have Account?
     </v-btn>
   </v-form>
   </v-card>   
@@ -62,7 +94,7 @@
   position:absolute;
   left:500px;
   width: 600px;
-  height: 500px;
+  height: 1000px;
   top:60vh;
   border-radius:30px;
 }
