@@ -55,12 +55,11 @@
     </v-app-bar>
 
   </v-card>
-    <!-- end of page navigation div -->
+  <!-- end of page navigation div -->
 
    
-    <!-- end of header div -->
 
-    <!-- begin of page intro -->
+  <!-- begin of page intro -->
   <div>
   <div class="col-md-12 text-center">
     <v-carousel
@@ -286,17 +285,7 @@ export default {
   border-radius:25px;
   margin-top: 50px;
 }
-video{
-  position: absolute;
-  margin-top: -60px;
-  margin-left: -25px;
-  height: 400px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  object-fit: cover;
-  width: 74.2vw  !important;
-  opacity: ;
-}
+
 .nav-content {
   color: black;
   padding: 10px 20px;
