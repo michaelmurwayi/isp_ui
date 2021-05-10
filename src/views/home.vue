@@ -105,7 +105,65 @@
     </v-carousel-item>
   </v-carousel>
   </div>
-  </div>
+  <!-- end of intro div -->
+
+  <!-- Begining of package div  -->
+  <div class="col-md-12 packages row">
+    <div class="" style="position:relative; left:300px;">
+      <h2 class="packages-title"> OUR</h2>
+    </div>
+    <div class="" style="position:relative; left:340px; color:#FF8C00;">
+      <h2 class="packages-title">PACKAGES </h2>
+    </div> 
+      <v-container 
+        v-for="align in alignments"
+        :key="align"
+        >
+      <v-row
+        :align="items"
+        no-gutters
+        style="height:100%; position:relative; left:12px;"
+      >
+        <v-col
+          v-for="(items,index) in packages"
+          :key="index"
+          style="margin: 40px;"
+        >
+        <v-hover class="" v-slot="{ hover }">
+          <v-card
+            class="mx-auto"
+            color="black lighten-4"
+            max-width="150"
+          >
+            <v-card-text
+              class="pt-6"
+              style="position: relative;"
+            >
+              <v-expand-transition>
+                <div
+                  v-if="hover"
+                  class="d-flex  orange darken-2 v-card--reveal display-1 white--text"
+                  style="height: 80px; width:150px; position:relative; left:-15px;"
+                >
+                  <p>Purchase</p> 
+                </div>
+              <div class="font-weight-heavy white--text title mb-2">
+                <div>
+                {{ items.package }}
+                </div>
+                <div>
+                {{ items.package_price }} ksh
+                </div>
+              </div>
+              </v-expand-transition>
+            </v-card-text>
+          </v-card>
+        </v-hover>
+        </v-col>
+        </v-row>
+      </v-container>
+        </div>
+      </div>
     <!-- end of page intro -->
   </v-container>
     </v-container>
@@ -119,8 +177,6 @@ export default {
         colors: [
           'indigo',
           'warning',
-          'pink darken-2',
-          'red lighten-1',
           'deep-purple accent-4',
         ],
         slides: [
@@ -129,6 +185,65 @@ export default {
           'Third',
           
         ],
+        alignments: [
+        'start',
+        ],
+        packages:[
+          {
+            package:"50 MB",
+            package_price:"5",
+            package_length:"Daily",
+            speed:"moderate"
+          },
+          {
+            package:"Unlimited",
+            package_price:"10",
+            package_length:"hour",
+            speed:"moderate"
+          },
+          {
+            package:"150 MB",
+            package_price:"10",
+            package_length:"20",
+            speed:"moderate"
+          },
+          {
+            package:"400 MB",
+            package_price:"20",
+            package_length:"Daily",
+            speed:"moderate"
+          },
+          {
+            package:"2 GB",
+            package_price:"50",
+            package_length:"Weekly",
+            speed:"moderate"
+          },
+          {
+            package:"5 GB",
+            package_price:"150",
+            package_length:"Weekly",
+            speed:"moderate"
+          },
+          {
+            package:"UNLIMITED",
+            package_price:"80",
+            package_length:"Daily",
+            speed:"Fast"
+          },
+          {
+            package:"UNLIMITED",
+            package_price:"300",
+            package_length:"Weekly",
+            speed:"moderate"
+          },
+          {
+            package:"UNLIMITED",
+            package_price:"1000",
+            package_length:"Monthly",
+            speed:"moderate"
+          }
+        ]
       }
     },
   }
@@ -137,20 +252,118 @@ export default {
 <style>
 .main{
   background-image: url("../assets/background.png");
+  background-size: cover;
   position: absolute;
+  top: 0px;
   bottom: 0px;
-  height: 100%;
-  width: 80vw;
+  height: 160%;
+  width: 100%;
   border-radius: 0px;
   opacity: ;
 }
 .container-fluid{
   background:	#E8E8E8;
-  height: 100vh;
+  height: 150vh;
   position: absolute;
   top: 0px;
   left: 200px;
-  width: 10vw;
+  margin: 20px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px black;
+}
+.navigate{
+  border-radius: 20px;
+  background: transparent;
+}
+.header{
+  height: 400px;
+  width: 80%;
+  border-radius:25px;
+  margin-top: 50px;
+}
+video{
+  position: absolute;
+  margin-top: -60px;
+  margin-left: -25px;
+  height: 400px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  object-fit: cover;
+  width: 74.2vw  !important;
+  opacity: ;
+}
+.nav-content {
+  color: black;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2vh;
+  font-weight: 200px;
+  left: 0;
+  padding: auto;
+}
+.navlinks {
+  color: #fff;
+  padding: 1px 20px;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  float: right;
+  transition: width 4.4s;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.navlinks.active,
+a:hover,
+.navlinks:hover {
+  color: #421A4C;
+  border-bottom-color: #421A4C;
+  transition: width 2.4s linear;
+  transition-property: border-bottom;
+}
+.intro{
+  position: absolute;
+  background: transparent;
+  top:165px;
+  left: 0px;
+}
+.packages{
+  position: absolute;
+  top: 450px;
+  left: 0px;
+  text-align: center;
+}
+.packages-title{
+  font-size: 70px;
+  font-weight: 900;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .main{
+  background-image: url("../assets/background.png");
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  height: 150%;
+  width: 100%;
+  border-radius: 0px;
+  opacity: ;
+}
+  .container-fluid{
+  background:	#E8E8E8;
+  height: 120vh;
+  width: 10px;
+  position: absolute;
+  top: 0px;
+  left: 70px;
   margin: 20px;
   margin-bottom: 50px;
   border-radius: 20px;
@@ -218,18 +431,6 @@ a:hover,
   top:165px;
   left: 0px;
 }
-@media only screen and (max-width: 768px) {
-  video{
-  position: absolute;
-  margin-top: -12px;
-  margin-left: -12px;
-  height: 200px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  object-fit: cover;
-  width: 92.5vw  !important;
-  opacity: ;
-  }
 
 
 }
