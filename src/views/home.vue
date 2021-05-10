@@ -145,7 +145,8 @@
                   class="d-flex  orange darken-2 v-card--reveal display-1 white--text"
                   style="height: 80px; width:150px; position:relative; left:-15px;"
                 >
-                  <p>Purchase</p> 
+                  Purchase
+                  {{ items.package_price }}ksh
                 </div>
               <div class="font-weight-heavy white--text title mb-2">
                 <div>
@@ -153,6 +154,9 @@
                 </div>
                 <div>
                 {{ items.package_price }} ksh
+                </div>
+                <div>
+                {{ items.package_length }}
                 </div>
               </div>
               </v-expand-transition>
