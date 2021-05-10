@@ -127,13 +127,13 @@
         <v-col
           v-for="(items,index) in packages"
           :key="index"
-          style="margin: 40px;"
+          style="margin: 40px; width:200px;"
         >
         <v-hover class="" v-slot="{ hover }">
           <v-card
             class="mx-auto"
             color="black lighten-4"
-            max-width="150"
+            width="250"
           >
             <v-card-text
               class="pt-6"
@@ -143,7 +143,7 @@
                 <div
                   v-if="hover"
                   class="d-flex  orange darken-2 v-card--reveal display-1 white--text"
-                  style="height: 80px; width:150px; position:relative; left:-15px;"
+                  style="height: 100px; width:100%; position:relative; top:-20px; left: 0px;"
                 >
                   Purchase
                   {{ items.package_price }}ksh
