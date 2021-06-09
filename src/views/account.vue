@@ -1,21 +1,11 @@
-<template class="">
-<v-app>
-
+<template>
+<v-app class="main">
   <div style="position:absolute; top:0px;" class="col-md-12">
     <sideNav />
   </div>
-  <div class="row mt-5">
-
-  <div class="monitor col-md-5 red">
-    
+  <div class="ml-n2">
+  <Monitor class="monitor mt-15" :titles="titles"/>
   </div>
-
-  <div class="monitors col-md-6 ">
-
-    <Monitor class="monitor" :titles="titles"/>
-  </div>
-  </div>
-
 </v-app>
 </template>
 
@@ -56,6 +46,17 @@ export default {
   position: relative;
   margin-top: 0px;
   margin-left: 20px;
-  height: 100vh;
+  background-color: blanchedalmond;
+}
+.main{
+  background-image: url("../assets/background.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  height: 160%;
+  width: 100%;
+  border-radius: 0px;
+  background-color: red;
 }
 </style>
