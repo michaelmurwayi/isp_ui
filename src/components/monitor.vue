@@ -19,9 +19,9 @@
           </v-card>
       </div>
     </div>
-          <hr class="hr mt-15">
-          <v-card-title class="text-grey ml-15"> {{ titles[0].title }} :<v-card-title class="text-green"> Connection is Limited Please Purchase a Data Plan</v-card-title> </v-card-title>
-          <hr class="hr mt-n4">
+          <hr class="hr mt-15 col-md-10 ml-15" >
+          <v-card-title class="text-grey mt-n15" style="margin-left:300px;"> {{ titles[0].title }} :<v-card-title class="text-green"> Connection is Limited Please Purchase a Data Plan</v-card-title> </v-card-title>
+          <hr class="hr mt-n4 col-md-10 ml-15">
   </div>
           
 </v-app>
@@ -60,6 +60,6 @@ export default {
 }
 .v-card{
   width: 420px;
-  background-image: url("https://picsum.photos/1920/1080?random");
+  background-image: url("https://raw.githubusercontent.com/ijklim/simon-game/gh-pages/assets/img/bg--game-pad.jpg");
 }
 </style>

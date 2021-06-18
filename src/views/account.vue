@@ -6,17 +6,21 @@
   <div class="ml-n2">
   <Monitor class="monitor mt-15" :titles="titles"/>
   </div>
+
+  <userInfo />
 </v-app>
 </template>
 
 <script lang="ts">
 import sideNav from  '../components/sideNav.vue'
 import Monitor from  '../components/monitor.vue'
+import userInfo from '../components/userInfo.vue'
 
 export default {
   components: {
     sideNav,
-    Monitor
+    Monitor,
+    userInfo
   },
   data () {
     return {
@@ -32,8 +36,8 @@ export default {
 
 
 <style>
-.account_main{
-
+.main{
+  background-color: red;
   background-image: url('../assets/account_background.jpeg');
 }
 .monitor{
